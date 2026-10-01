@@ -1,0 +1,32 @@
+trigger:
+  branches:
+    include:
+      - release
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  - group: vg-ciudadinteligente-portal
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: DevOps/pipeline-templates
+      ref: refs/heads/deploy/node
+
+    - repository: gitops
+      type: git
+      name: ArgoCD/ciudadinteligente
+      ref: refs/heads/main
+
+extends:
+  template: template/template.yml@templates
+  parameters:
+    deployStack: node
+    deployKind: aks
+    sonarEnable: false
+    sonarNodeVersion: '20.x'
+    sonarCoverageCommand: 'npm run test:cov'
