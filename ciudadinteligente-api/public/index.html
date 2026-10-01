@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF - Report {{DEPENDENCY}}</title>
+  <style>
+    @font-face {
+      font-family: "Metropolis-Regular";
+      src: url("./fonts/Metropolis-Regular.otf") format("opentype");
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "Metropolis-Medium";
+      src: url("./fonts/Metropolis-Medium.otf") format("opentype");
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: "Metropolis-Bold";
+      src: url("./fonts/Metropolis-Bold.otf") format("opentype");
+      font-weight: bold;
+    }
+    @font-face {
+      font-family: "Metropolis-Black";
+      src: url("./fonts/Metropolis-Black.otf") format("opentype");
+      font-weight: 900;
+    }
+    @font-face {
+      font-family: "MyriadPro-Regular";
+      src: url("./fonts/MyriadPro-Regular.otf") format("opentype");
+      font-weight: normal;
+    }
+
+    html {
+      min-width: 1440px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-width: 1440px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 50px;
+      background-image: url("./images/bg.png");
+      position: relative;
+      background-size: 100% auto;
+      background-repeat: repeat-y;
+      background-position: top center;
+      overflow-y: scroll;
+    }
+    .img-logo-cad {
+      width: 20%;
+    }
+    .img-header {
+      margin-top: 50px;
+      width: 60%;
+    }
+    .personaje {
+      position: relative;
+      width: 90%;
+    }
+    .img-personaje {
+      width: 100%;
+    }
+    .message-1 {
+      position: absolute;
+      top: 7%;
+      left: 23.5%;
+      width: 32%;
+      color: #ffffff;
+      font-family: Metropolis-Bold;
+      font-size: 1.5rem;
+      margin: 0;
+      text-align: center;
+    }
+    .box {
+      width: 80%;
+      display: flex;
+    }
+    .box-left {
+      z-index: 1;
+    }
+    .box-left,
+    .box-right {
+      width: 50%;
+      position: relative;
+    }
+    .img-box {
+      width: 100%;
+      transform: translateY(-30%);
+    }
+    .contain {
+      position: absolute;
+      width: 100%;
+      top: 30px;
+      left: 0;
+      display: flex;
+    }
+    .message-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      margin: 0;
+      padding: 0 4rem 0 2rem;
+      color: #153957;
+      font-family: Metropolis-Black;
+    }
+    .message-3 {
+      font-size: 2rem;
+      display: block;
+      margin: 0;
+    }
+    .message-4 {
+      background: #153957;
+      color: #9bfcfd;
+      padding: .5rem;
+      font-size: 1.3rem;
+      margin: 0;
+      width: fit-content;
+    }
+    .message-5 {
+      font-family: 'Metropolis-Bold';
+      margin: 0;
+    }
+    .box-right {
+      color: #ffffff;
+      transform: translateY(-15%);
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .box-right::after {
+      content: '';
+      width: 112%;
+      height: 100%;
+      display: block;
+      background: #020d1e;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      transform: translateX(-12%);
+    }
+    .message-6 {
+      font-size: 1.2rem;
+      width: 100%;
+      font-family: 'Metropolis-Medium';
+      padding: 2rem;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/header.png" alt="Texto del encabezado" class="img-header">
+  <div class="personaje">
+    <img src="./images/personaje.png" alt="Personaje" class="img-personaje">
+    <p class="message-1">
+      Hola, soy SIDato, el embajador de la Secretaría de Innovación Digital. <br><br>
+      Te voy a contar cómo avanzó la transformación digital de la {{DEPENDENCY}}.
+    </p>
+  </div>
+  <!-- <div class="box">
+    <div class="box-left">
+      <img src="./images/box.png" alt="Box" class="img-box">
+      <div class="contain">
+        <p class="message-2">
+          <span class="message-3">SAP</span>
+          <span class="message-4">Aporte económico: $198.000.000</span>
+          <span class="message-5">Fecha de Inicio: 12-02-2025.<br>Fecha de Terminación: 28-02-2026.</span>
+        </p>
+      </div>
+    </div>
+    <div class="box-right">
+      <p class="message-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, assumenda doloribus quia eum magni praesentium cupiditate aliquam voluptatem, libero, quos est laudantium suscipit tempore cum modi enim nisi repudiandae id.
+      </p>
+    </div>
+  </div> -->
+  <img src="./images/logo-cad.png" alt="Logo Distrito de Medellín" class="img-logo-cad">
+</body>
+</html>
